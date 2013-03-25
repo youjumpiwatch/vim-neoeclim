@@ -24,11 +24,9 @@ endfunction"}}}
 function! s:source.get_complete_words(cur_keyword_pos, cur_keyword_str)"{{{
   let ret = eclim#java#complete#CodeComplete(0, '')
 
-	if type(ret) != 3
+	if type(ret) != 3 || neocomplcache#util#get_last_status() != 0
 		return []
 	endif
-
-	Decho string(ret)
 
 	return ret
 endfunction"}}}
