@@ -8,7 +8,7 @@ let s:source = {
       \}
 
 function! s:source.initialize()"{{{
-	call neocomplcache#set_completion_length('eclim', g:neocomplcache_manual_completion_start_length)
+	call neocomplcache#set_completion_length('eclim', g:neocomplcache_auto_completion_start_length)
 endfunction"}}}
 
 function! s:source.finalize()"{{{
